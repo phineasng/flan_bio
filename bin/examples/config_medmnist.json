@@ -1,0 +1,41 @@
+{
+  "model": {
+    "feature_net": "MNISTSimpleFeatNet",
+    "classifier": "WideClassifierDrop1024",
+    "feature_net_args": {
+      "pos_emb_dim": 32,
+      "latent_dim": 256,
+      "patcher_kwargs": {
+        "patch_size": 4,
+        "stride": 4,
+        "n_filters": 400,
+        "activation": "ReLU"
+      }
+    },
+    "classifier_args": {
+      "latent_dim": 256,
+      "n_classes": 7
+    }
+  },
+  "dataset_params": {
+    "dataset": "medmnist",
+    "dataroot": "",
+    "dataset_args": {}
+  },
+  "train_params": {
+    "n_epochs": 100,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "norm_reg": 0.0,
+    "optimizer_params": {
+      "lr": 0.001,
+      "weight_decay": 0.5
+    },
+    "scheduler": "CosineAnnealingWarmRestarts",
+    "scheduler_params": {
+      "T_0": 1,
+      "T_mult": 2
+    }
+  },
+  "checkpoint_root": ""
+}

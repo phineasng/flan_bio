@@ -1,0 +1,7 @@
+#!/bin/bash
+#BSUB -e \"/u/vas/Results/${JOB_NAME}.stderr.%J\"
+#BSUB -o \"/u/vas/Results/${JOB_NAME}.stdout.%J\"
+#BSUB -J \"/u/vas/Results/${JOB_NAME}\"
+source ~/.bashrc
+conda activate flan
+python /u/vas/kme_net/bin/run_experiment.py --config_file /u/vas/kme_net/bin/examples/cluster_config1.json

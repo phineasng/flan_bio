@@ -1,0 +1,6 @@
+{
+    "ligand_start_stop_token": true,
+    "receptor_start_stop_token": true,
+    "ligand_padding_length": 50,
+    "receptor_padding_length": 150
+}

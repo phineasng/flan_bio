@@ -1,0 +1,36 @@
+{
+    "model": {
+        "feature_net": "TE_FeatureNet1",
+        "classifier": "WideClassifierDrop",
+        "feature_net_args": {
+            "latent_dim": 128,
+            "emb_dim": 32
+        },
+        "classifier_args": {
+            "latent_dim": 128,
+            "n_classes": 2
+        }
+    },
+    "dataset_params": {
+        "dataset": "tcr",
+        "dataroot": "",
+        "dataset_args": {
+            "train_affinity_filepath": "",
+            "test_affinity_filepath": "",
+            "receptor_filepath": "",
+            "ligand_filepath": "",
+            "params_filepath": ""
+        }
+    },
+    "train_params": {
+        "n_epochs": 100,
+        "batch_size": 64,
+        "optimizer": "Adam",
+        "optimizer_params": {
+            "lr": 0.001,
+            "weight_decay": 5e-4
+        },
+        "scheduler": null
+    },
+    "checkpoint_root": ""
+}
